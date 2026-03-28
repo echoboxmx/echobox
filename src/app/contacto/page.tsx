@@ -36,7 +36,7 @@ export default function Contact() {
 
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}>
             <Card className="bg-[#121212]/80 backdrop-blur-xl border border-white/10 shadow-[0_0_50px_rgba(255,107,0,0.05)] rounded-[2rem] overflow-hidden p-0 sm:p-2">
-              <div className="grid md:grid-cols-5 gap-8 bg-[#0b0b0b] rounded-[1.5rem] p-8 md:p-12">
+              <div className="grid md:grid-cols-5 gap-6 sm:gap-8 bg-[#0b0b0b] rounded-[1.5rem] p-5 sm:p-8 md:p-12">
                 
                 {/* Lateral Banner */}
                 <div className="md:col-span-2 flex flex-col justify-between">
@@ -84,7 +84,20 @@ export default function Contact() {
                         </div>
                         <div className="space-y-2 col-span-2 sm:col-span-1">
                           <Label htmlFor="phone" className="text-white/70">Teléfono (WhatsApp) *</Label>
-                          <Input id="phone" name="phone" required type="tel" placeholder="10 dígitos" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary" />
+                          <Input 
+                            id="phone" 
+                            name="phone" 
+                            required 
+                            type="tel" 
+                            placeholder="Ej. 5512345678" 
+                            pattern="[0-9]{10}"
+                            maxLength={10}
+                            title="Por favor ingresa exactamente 10 dígitos numéricos"
+                            onInput={(e) => {
+                              e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
+                            }}
+                            className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary" 
+                          />
                         </div>
                         <div className="space-y-2 col-span-2 sm:col-span-1">
                           <Label htmlFor="city" className="text-white/70">Ciudad *</Label>
