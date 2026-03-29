@@ -24,8 +24,8 @@ export async function submitContact(formData: FormData) {
     if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== "tu_api_key_de_resend_aqui") {
       await resend.emails.send({
         from: "EchoBox <onboarding@resend.dev>", // Cambia a tu dominio verificado cuando vayas a prod
-        to: ["delivered@resend.dev"], // Pon aquí tu correo para recibir los leads locales
-        subject: `Nuevo Lead Lead: ${business} de ${city}`,
+        to: ["echobox.mx@gmail.com"], // Correo para recibir los leads locales
+        subject: `Nuevo Lead: ${business} de ${city}`,
         html: `
           <h1>Nuevo prospecto de EchoBox</h1>
           <p><strong>Nombre:</strong> ${name}</p>
@@ -68,8 +68,7 @@ export async function submitContact(formData: FormData) {
 ${message ? `*Mensaje adicional:* ${message}` : ""}`;
 
   // 3. Redirigir dinámicamente al enlace de wa.me
-  // 521 indica México + 1 (móvil). Puedes poner tus 10 dígitos reemplazando XXXXXXXXXX
-  const whatsappNumber = "521XXXXXXXXXX"; 
+  const whatsappNumber = "529612794095"; 
   const encodedText = encodeURIComponent(wpText);
   const waUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
 
