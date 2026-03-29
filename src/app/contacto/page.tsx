@@ -76,11 +76,11 @@ export default function Contact() {
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2 col-span-2 sm:col-span-1">
                           <Label htmlFor="name" className="text-white/70">Nombre Completo *</Label>
-                          <Input id="name" name="name" required placeholder="Ej. Carlos Mendoza" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary" />
+                          <Input id="name" name="name" required placeholder="Ej. Carlos Mendoza" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary text-base md:text-sm" />
                         </div>
                         <div className="space-y-2 col-span-2 sm:col-span-1">
                           <Label htmlFor="business" className="text-white/70">Nombre del Negocio *</Label>
-                          <Input id="business" name="business" required placeholder="Ej. Cantina La 10" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary" />
+                          <Input id="business" name="business" required placeholder="Ej. Cantina La 10" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary text-base md:text-sm" />
                         </div>
                         <div className="space-y-2 col-span-2 sm:col-span-1">
                           <Label htmlFor="phone" className="text-white/70">Teléfono (WhatsApp) *</Label>
@@ -89,6 +89,7 @@ export default function Contact() {
                             name="phone" 
                             required 
                             type="tel" 
+                            inputMode="numeric"
                             placeholder="Ej. 5512345678" 
                             pattern="[0-9]{10}"
                             maxLength={10}
@@ -96,16 +97,16 @@ export default function Contact() {
                             onInput={(e) => {
                               e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
                             }}
-                            className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary" 
+                            className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary text-base md:text-sm" 
                           />
                         </div>
                         <div className="space-y-2 col-span-2 sm:col-span-1">
                           <Label htmlFor="city" className="text-white/70">Ciudad *</Label>
-                          <Input id="city" name="city" required placeholder="Ej. CDMX" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary" />
+                          <Input id="city" name="city" required placeholder="Ej. CDMX" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary text-base md:text-sm" />
                         </div>
                         <div className="space-y-2 col-span-2">
                           <Label htmlFor="email" className="text-white/70">Email (Opcional)</Label>
-                          <Input id="email" name="email" type="email" placeholder="correo@negocio.com" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary" />
+                          <Input id="email" name="email" type="email" placeholder="correo@negocio.com" className="bg-[#1a1a1a] border-white/10 text-white focus-visible:ring-primary text-base md:text-sm" />
                         </div>
                       </div>
                     </div>
@@ -149,7 +150,7 @@ export default function Contact() {
                     {/* Mensaje */}
                     <div className="space-y-2 pt-2">
                        <Label htmlFor="message" className="text-white/70">Mensaje Adicional o Dudas</Label>
-                       <Textarea id="message" name="message" placeholder="¿Tienes alguna situación particular en el local?" className="bg-[#1a1a1a] border-white/10 text-white min-h-[100px] focus-visible:ring-primary" />
+                       <Textarea id="message" name="message" placeholder="¿Tienes alguna situación particular en el local?" className="bg-[#1a1a1a] border-white/10 text-white min-h-[100px] focus-visible:ring-primary text-base md:text-sm" />
                     </div>
 
                     <Button type="submit" size="xl" className="w-full font-bold">

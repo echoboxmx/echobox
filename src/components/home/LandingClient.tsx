@@ -301,32 +301,7 @@ export function LandingClient({ clients }: { clients: any[] }) {
         </div>
       </section>
 
-      {/* 7. TECNOLOGÍA */}
-      <section className="py-28 border-y border-white/5">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white">Tecnología Sólida</h2>
-            <p className="text-lg text-muted-foreground mt-4">Arquitctura Vercel + AWS lista para alto flujo de personas.</p>
-          </motion.div>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid md:grid-cols-3 gap-6">
-            <motion.div variants={fadeInUp} className="flex flex-col items-center text-center p-6">
-               <AppWindow className="text-primary w-12 h-12 mb-4" />
-               <h4 className="text-xl font-bold text-white mb-2">Módulo PWA</h4>
-               <p className="text-muted-foreground">Funciona fluidamente en mobile como app nativa, pero desde Chrome Safari sin descargas irritantes.</p>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="flex flex-col items-center text-center p-6">
-               <Radio className="text-primary w-12 h-12 mb-4" />
-               <h4 className="text-xl font-bold text-white mb-2">WebSockets</h4>
-               <p className="text-muted-foreground">Lo que tu cliente presiona en la mesa, aparece en la pantalla principal en milisegundos reales.</p>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="flex flex-col items-center text-center p-6">
-               <HardDrive className="text-primary w-12 h-12 mb-4" />
-               <h4 className="text-xl font-bold text-white mb-2">Caché Persistente</h4>
-               <p className="text-muted-foreground">A prueba de fallas. Si el internet parpadea, tu fila de reproducción no se pierde jamas.</p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* 8. REQUERIMIENTOS TÉCNICOS */}
       <section className="py-24 bg-[#0a0a0a]">
